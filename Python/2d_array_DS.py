@@ -91,7 +91,7 @@ if __name__ == '__main__':
            "0 0 2 4 4 0\n"
            "0 0 0 2 0 0\n"
            "0 0 1 2 4 0\n\n"
-           "Input 6x6 2D Array\n")
+           "Enter an 6x6 2D Array\n")
 
     print(mes)
 
