@@ -1,0 +1,3 @@
+>>> from french_deck import FrenchDeck, Card
+>>> beer_card = Card('7', 'diamond')
+>>> beer_card
