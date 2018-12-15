@@ -1,3 +1,63 @@
 >>> from french_deck import FrenchDeck, Card
->>> beer_card = Card('7', 'diamond')
+
+>>> beer_card = Card('7', 'diamonds')
 >>> beer_card
+Card(rank='7', suit='diamonds')
+
+>>> deck = FrenchDeck()
+>>> len(deck)
+52
+
+>>> deck[:3]
+[Card(rank='2', suit='spades'), Card(rank='3', suit='spades'), Card(rank='4', suit='spades')]
+
+>>> len(deck[:3])
+3
+
+>>> Card('Q', 'hearts') in deck
+True
+
+>>> Card('M', 'hearts') in deck
+False
+
+>>> for card in deck:  # doctest: +ELLIPSIS
+...   print(card)
+Card(rank='2', suit='spades')
+Card(rank='3', suit='spades')
+Card(rank='4', suit='spades')
+...
+
+>>> for card in reversed(deck):  # doctest: +ELLIPSIS
+...   print(card)
+Card(rank='A', suit='hearts')
+Card(rank='K', suit='hearts')
+Card(rank='Q', suit='hearts')
+...
+
+>>> for n, card in enumerate(deck, 1): # doctest: +ELLIPSIS
+...   print(n, card)
+1 Card(rank='2', suit='spades')
+2 Card(rank='3', suit='spades')
+3 Card(rank='4', suit='spades')
+...
+
+Rank test:
+
+>>> suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)
+>>> len(suit_values)
+4
+
+>>> def spades_high(card):
+...    rank_value = FrenchDeck.ranks.index(card.rank)
+...    return rank_value * len(suit_values) + suit_values[card.suit]
+
+>>> spades_high(Card('2', 'spades'))
+3
+
+>>> for card in sorted(deck, key=spades_high): # doctest: +ELLIPSIS
+...   print(card)
+Card(rank='2', suit='clubs')
+Card(rank='2', suit='diamonds')
+Card(rank='2', suit='hearts')
+Card(rank='2', suit='spades')
+...
