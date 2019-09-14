@@ -35,7 +35,7 @@ Output: true
 """
 
 
-def is_valid(self, s: str) -> bool:
+def is_valid(s: str) -> bool:
     stack = []
     characters = {
         '(': ')',
@@ -55,3 +55,6 @@ def is_valid(self, s: str) -> bool:
         return False
 
     return True
+
+
+print(is_valid('()[()({})]'))
