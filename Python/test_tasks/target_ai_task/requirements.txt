@@ -1,0 +1,5 @@
+asyncio==3.4.3
+bson==0.5.8
+Click==7.0
+python-dateutil==2.8.1
+six==1.14.0
