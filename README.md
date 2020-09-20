@@ -7,6 +7,8 @@
 
 # Practice
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e1b5c6e824da409285f12f6c96a45d92)](https://app.codacy.com/manual/J0shu4B0y/Practice?utm_source=github.com&utm_medium=referral&utm_content=J0shu4B0y/Practice&utm_campaign=Badge_Grade_Dashboard)
+
 Analysis and solution of programming tasks with different levels of complexity.
 
 ## Programming languages
