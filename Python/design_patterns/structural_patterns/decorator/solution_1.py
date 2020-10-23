@@ -8,7 +8,7 @@ def make_paragraph(fn):
     @wraps(
         fn
     )  # This makes the decorator transparent in terms of its name and docstring
-    def decorator():
+    def decorator() -> str:
         return "<p>" + fn() + "</p>"
 
     return decorator
