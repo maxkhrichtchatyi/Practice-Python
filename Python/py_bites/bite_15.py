@@ -12,7 +12,7 @@
 # Notice that the 2nd column should have a fixed width of 11 chars,
 # so between Julian and Australia there are 5 spaces, between Bob and
 # Spain, there are 8. This column should also be aligned to the left.
-# 
+#
 # Ideally you use only one for loop, but that is not a requirement.
 
 names = "Julian Bob PyBites Dante Martin Rodolfo".split()
