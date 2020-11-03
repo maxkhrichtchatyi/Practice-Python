@@ -4,15 +4,15 @@
 #
 # Example :
 #
-# Input: arrl[] = {1, 2, 9, 5, 5}
-#        exit[] = {4, 5, 12, 9, 12}
+# Input: [(1, 4), (2, 5), (9, 12), (5, 9), (5, 12)]
+#
 # First guest in array arrives at 1 and leaves at 4,
 # second guest arrives at 2 and leaves at 5, and so on.
 #
 # Output: 5
 # There are maximum 3 guests at time 5.
 
-guests = [(10, 20), (10, 15), (15, 20)]
+guests = [(1, 4), (2, 5), (9, 12), (5, 9), (5, 12)]
 
 arrivals = [_[0] for _ in guests]
 exits = [_[1] for _ in guests]
@@ -23,10 +23,10 @@ exits.sort()
 
 # guests_in indicates number of
 # guests at a time
-guests_in = 1
-max_guests = 1
-time = arrivals[0]
-i = 1
+guests_in = 0
+max_guests = 0
+time = 0
+i = 0
 j = 0
 
 # Similar to merge in merge sort to
@@ -50,5 +50,4 @@ while i < len(guests) and j < len(guests):
         guests_in = guests_in - 1
         j = j + 1
 
-print("Maximum Number of Guests =",
-      max_guests, "at time", time)
+print("Maximum Number of Guests =", max_guests, "at time", time)
