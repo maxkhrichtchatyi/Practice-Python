@@ -1,0 +1,20 @@
+name: Trigger jenkins job
+on: 
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - edited
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger single Job
+      uses: appleboy/jenkins-action@master
+      with:
+        url: ${{secrets.JENKINS_URL}}
+        user: ${{secrets.JENKINS_USER}}
+        token: ${{secrets.JENKINS_TOKEN}}
+        job: ${{secrets.JENKINS_JOB}}
