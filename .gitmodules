@@ -1,0 +1,3 @@
+[submodule "frameworks/research-drf-app"]
+	path = frameworks/research-drf-app
+	url = https://github.com/J0shu4B0y/research-drf-app/
