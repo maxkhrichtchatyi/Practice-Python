@@ -1,2 +1,2 @@
 beautifulsoup4==4.8.2
-PyYAML==5.1
+PyYAML==5.4
