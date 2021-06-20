@@ -1,12 +1,3 @@
-class PayrollSystem:
-    def calculate_payroll(self, employees):
-        print("Calculating Payroll")
-        print("-------------------")
-        for employee in employees:
-            print(f"Payroll for {employee.id} - {employee.name}")
-            print(f"- Check Amount: {employee.calculate_payroll()}\n")
-
-
 class Employee:
     def __init__(self, id, name):
         self.id = id
@@ -42,19 +33,21 @@ class CommissionEmployee(SalaryEmployee):
         return fixed + self.commission
 
 
-salary_employee = SalaryEmployee(id=1, name="John Smith", weekly_salary=1500)
-hourly_employee = HourlyEmployee(
-    id=2, name="Rebeka Newman", hour_rate=30, hours_worked=301
-)
-commission_employee = CommissionEmployee(
-    id=3, name="Tom Jones", weekly_salary=1400, commission=350
-)
+class Manager(SalaryEmployee):
+    def work(self, hours):
+        print(f"{self.name} screams and yells for {hours} hours.")
 
-payroll_system = PayrollSystem()
-payroll_system.calculate_payroll(
-    employees=[
-        salary_employee,
-        hourly_employee,
-        commission_employee,
-    ]
-)
+
+class Secretary(SalaryEmployee):
+    def work(self, hours):
+        print(f"{self.name} expends {hours} hours doing office paperwork.")
+
+
+class SalesPerson(CommissionEmployee):
+    def work(self, hours):
+        print(f"{self.name} expends {hours} on the phone.")
+
+
+class FactoryWorker(HourlyEmployee):
+    def work(self, hours):
+        print(f"{self.name} manufactures gadgets for {hours} hours.")
