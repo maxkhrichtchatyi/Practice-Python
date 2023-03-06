@@ -25,11 +25,13 @@ Constraints:
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        appeared_numbers = set()
-        for num in nums:
+        appeared_numbers = set()  # SC O(n) 
+        for num in nums:  # TC O(n)
             if num in appeared_numbers:
                 return True
-            
+
             appeared_numbers.add(num)
 
         return False
+
+# Total: TC O(n), SC O(n)
