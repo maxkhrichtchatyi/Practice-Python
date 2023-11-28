@@ -16,3 +16,10 @@ def find_min_coins(v, coins_available):
             v -= sum(list_of_coins)
 
     return result
+
+
+# Main program to test the above code
+if __name__ == "__main__":
+
+    coins_available = [1, 5, 10, 25]  # The available coins are in increasing order
+    print(find_min_coins(19, coins_available))
