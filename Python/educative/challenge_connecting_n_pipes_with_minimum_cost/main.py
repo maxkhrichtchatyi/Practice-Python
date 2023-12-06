@@ -16,3 +16,10 @@ def min_cost(pipes):
             total_cost += selected_pipe
  
     return total_cost
+
+# Main program to test above function
+if __name__ == "__main__":
+
+    pipes = [4, 3, 2, 6]
+
+    print(min_cost(pipes))
