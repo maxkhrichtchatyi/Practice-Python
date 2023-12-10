@@ -6,9 +6,6 @@ def find_platform(arrival, departure):
     :return: Minimum number of platforms required for a railway Station
     """
 
-    arrival.sort()
-    departure.sort()
-
     arrival_index = 0
     departure_index = 0
     max_index = len(arrival)
