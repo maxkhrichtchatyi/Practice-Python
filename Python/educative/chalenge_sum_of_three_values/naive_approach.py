@@ -1,7 +1,5 @@
 def find_sum_of_three(nums, target):
 
-    nums.sort()
-
     for i in range(len(nums)):
         for j in range(len(nums) - 2):
             j += 1
