@@ -4,9 +4,6 @@ def sort_colors(colors):
     white = 0
     blue = len(colors) - 1
 
-    if len(colors) < 3:
-        return colors
-
     while blue >= white:
         if colors[white] == 0:
             if colors[red] != 0:
